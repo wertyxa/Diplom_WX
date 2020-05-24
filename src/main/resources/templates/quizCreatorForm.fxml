@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wetyxa.controllers.QuizCreatorFormController">
+   <children>
+      <AnchorPane fx:id="paneCreatorQuestion" disable="true" layoutX="340.0" prefHeight="670.0" prefWidth="864.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="336.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane fx:id="tabPane" layoutY="14.0" prefHeight="643.0" prefWidth="855.0" tabClosingPolicy="UNAVAILABLE" />
+         </children></AnchorPane>
+      <Separator layoutX="321.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="670.0" prefWidth="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="0.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Separator>
+      <AnchorPane prefHeight="600.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="5.0" prefHeight="150.0" prefWidth="310.0">
+               <children>
+                  <Label layoutX="70.0" layoutY="14.0" text="Виберіть або додайте курс" />
+                  <ChoiceBox fx:id="listKurs" layoutX="46.0" layoutY="41.0" prefHeight="30.0" prefWidth="182.0" />
+                  <Button fx:id="butAddNewKurs" layoutX="234.0" layoutY="41.0" mnemonicParsing="false" onAction="#addNewKurs" text="+" />
+                  <Button fx:id="butAddKursToList" layoutX="234.0" layoutY="90.0" mnemonicParsing="false" onAction="#addKursToList" text="+" visible="false" />
+                  <TextField fx:id="textFieldKurs" layoutX="46.0" layoutY="90.0" prefHeight="30.0" prefWidth="182.0" visible="false" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="5.0" layoutY="156.0" prefHeight="150.0" prefWidth="310.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="14.0" text="Виберіть або додайте предмет" />
+                  <ChoiceBox fx:id="listSubjects" disable="true" layoutX="46.0" layoutY="41.0" prefHeight="30.0" prefWidth="182.0" />
+                  <Button fx:id="butAddNewSubject" disable="true" layoutX="234.0" layoutY="41.0" mnemonicParsing="false" onAction="#addNewSubject" text="+" />
+                  <Button fx:id="butAddSubjectToList" layoutX="234.0" layoutY="90.0" mnemonicParsing="false" onAction="#addSubjectToList" text="+" visible="false" />
+                  <TextField fx:id="textFieldSubject" layoutX="46.0" layoutY="90.0" prefHeight="30.0" prefWidth="182.0" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="5.0" layoutY="317.0" prefHeight="150.0" prefWidth="310.0">
+               <children>
+                  <Label layoutX="70.0" layoutY="14.0" text="Виберіть або додайте тему" />
+                  <ChoiceBox fx:id="listThemes" disable="true" layoutX="46.0" layoutY="41.0" prefHeight="30.0" prefWidth="182.0" />
+                  <Button fx:id="butAddNewTheme" disable="true" layoutX="234.0" layoutY="41.0" mnemonicParsing="false" onAction="#addNewTheme" text="+" />
+                  <Button fx:id="butAddThemeToList" layoutX="234.0" layoutY="90.0" mnemonicParsing="false" onAction="#addThemeToList" text="+" visible="false" />
+                  <TextField fx:id="textFieldTheme" layoutX="46.0" layoutY="90.0" prefHeight="30.0" prefWidth="182.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wetyxa.controllers.QuestionCreatorController">
+   <children>
+      <TextArea fx:id="questionText" layoutX="12.0" layoutY="22.0" prefHeight="97.0" prefWidth="793.0" promptText="Введіть текст запитання" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextArea>
+      <AnchorPane layoutX="6.0" layoutY="136.0" prefHeight="140.0" prefWidth="793.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="136.0">
+         <children>
+            <VBox fx:id="vBoxFieldAnswer" layoutX="2.0" layoutY="2.0" spacing="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <VBox fx:id="vBoxRadioButtonsIsRight" layoutX="734.0" layoutY="7.0" />
+         </children>
+      </AnchorPane>
+      <HBox layoutX="14.0" layoutY="340.0" prefHeight="40.0" prefWidth="397.0" spacing="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="340.0">
+         <children>
+            <Button fx:id="saveQuestionButton" mnemonicParsing="false" onAction="#saveQuestion" prefHeight="30.0" prefWidth="106.0" text="Зберегти" />
+            <Button fx:id="deleteQuestionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteQuestion" prefHeight="30.0" prefWidth="91.0" text="Видалити" />
+            <Button fx:id="addNewQuestionButton" mnemonicParsing="false" onAction="#addNewTabQuestion" prefHeight="30.0" prefWidth="171.0" text="Додати нове питання" />
+         </children>
+      </HBox>
+      <Button fx:id="addNewAnswerButton" layoutX="574.0" layoutY="326.0" mnemonicParsing="false" onAction="#addNewAnswer" prefHeight="40.0" prefWidth="215.0" text="Додати нову Відповідь" AnchorPane.bottomAnchor="14.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Button>
+   </children>
+</AnchorPane>
